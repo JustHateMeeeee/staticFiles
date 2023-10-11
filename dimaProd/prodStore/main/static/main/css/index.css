@@ -1,0 +1,254 @@
+{% load static %}
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+html, body{
+    height: 100%;
+}
+
+
+
+.wraper{
+    display: flex;
+    flex-direction: column;
+    min-width: 100%;
+}
+
+h1, p, input{
+    margin: 0px;
+    padding: 0px;
+    border: none;
+    font-family: system-ui, -apple-system,
+    BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+}
+
+button{
+    background-color: rgb(91, 12, 219);
+}
+
+h2{
+    background-color: rgb(91, 12, 219);
+    margin: 0px;
+    padding: 0px;
+    border: none;
+    font-family: system-ui, -apple-system,
+    BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+
+main{
+    flex-grow: 1;
+}
+
+footer{
+    display: flex;
+    background-color: #1F1F1F;
+    color: white;
+    height: 300px;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 10px;
+}
+/*======== Base ===============*/
+
+.shapka{
+    display: flex;
+    background-color: #1F1F1F;
+    align-items: center;
+    justify-content: space-between;
+    height: 150px;
+}
+
+.categoris{
+    background-color: #F1F1F1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-width: 200px;
+    max-width: 580px;
+    width: 100%;
+    margin-left: 10%;
+}
+
+.ico_img{
+    width: auto;
+    height: auto;
+}
+
+.box{
+    display: flex;
+}
+
+
+
+.logo_img{
+    height: 100px;
+}
+
+.contacts{
+    display: flex;
+    min-width: 200px;
+    max-width: 250px;
+    width: 100%;
+    justify-content: space-around;
+    margin-right: 20px;
+
+}
+
+.kostil{
+    display: flex;
+    max-width: 65%;
+    width: 100%;
+    margin-left: 1.6%;
+}
+
+
+.f_info{
+    max-width: 20%;
+    width: 100%;
+    padding: 10px;
+}
+
+/* =================  карточка ========================*/
+
+.p_img{
+    width: 270px;
+    height: 400px;
+}
+
+.woman{
+    font-size: 30px;
+    color: #F12DFB;
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+.man{
+    font-size: 30px;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+.child{
+    font-size: 30px;
+    color: #4C84DF;
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+.product_plase{
+    margin: 0px 30px 0px 30px;
+    padding: 10px 0px 10px 0px;
+}
+
+.Plase_tovar{
+    background: url("{% static 'main/img/BackgroundPhoto.jpg' %}") 0px, 0px, no-repeat;
+    background-size: 100% 100%;
+    width: 100%;
+    height: 100%;
+}
+
+.products_plases{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.korzina_frame{
+    display: none;
+    align-items: center;
+    justify-content: center;
+
+}
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+.close_btn{
+    background-color: rgb(8, 169, 194);
+    border: none;
+    border-radius: 100%;
+}
+
+.close_btn:active{
+    background-color: rgb(0, 50, 58);
+    border: none;
+    border-radius: 100%;
+}
+
+.korzina{
+    display: flex;
+    align-items: center;
+    background-color: rgb(131, 126, 126);
+    border-radius: 20px;
+    padding: 20px;
+    height: 70%;
+    max-width: 100%;
+}
+.korz_img{
+    height: 100;
+    width: auto;
+    margin: 20px;
+}
+.korz_img_f{
+    text-align: center;
+}
+.korz_info{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    align-items: flex-end;
+    justify-content: space-between;
+    max-height: 80%;
+    font-size: 20px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: rgb(8, 169, 194);
+    border-radius: 10px;
+    padding: 10px;
+
+}
+.korz_buy{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+    font-size: 30px;
+}
+
+.korz_btn{
+    width: 100px;
+    height: 40px;
+    outline: none;
+    border: none;
+    border-radius: 15px 15px 15px 15px;
+    background-color: dimgrey;
+}
+
+.korz_btn:active{
+    width: 100px;
+    height: 40px;
+    outline: none;
+    border: none;
+    border-radius: 30px 30px 30px 30px;
+    background-color: rgb(200, 196, 196);
+}
+
+.korz_price{
+    border-radius: 10px;
+    background-color: dimgrey;
+    padding: 6px;
+}

@@ -1,0 +1,94 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Главная станица</title>
+    <link rel="stylesheet" href="{% static 'main/css/index.css' %}">
+</head>
+<body>
+    <div class="wraper">
+        <header>
+        <div>
+            <div class="shapka">
+                <div class="kostil">
+                    <div class="logo" id="logo"><img class="logo_img" id="logo_img" src="{% static 'main/img/logoMain.jpg' %}" alt="Логотип сайта"></div>
+                    <div class="categoris">
+                        <button onclick="location. reload()"><h2>Главная</h2></button>
+                        <button onclick="openMan()"><h2>Мужчины</h2></button>
+                        <button onclick="openWoman()"><h2>Женщины</h2></button>
+                        <button onclick="openChild()"><h2>Дети</h2></button>
+                    </div>
+                </div>
+                    <div class="basket"></div>
+                    <a  class="ico_img" title="Whatsapp" href="https://www.whatsapp.com/89225882125"><img src="{% static 'main/img/basket.png' %}" alt="крылышки кфс" /></a>
+                    <div class="contacts">
+                        <a  class="ico_img" title="Whatsapp" href="https://www.whatsapp.com/89225882125"><img src="{% static 'main/img/wpIcon.png' %}" alt="Написать в Whatsapp" /></a>
+                        <a class="ico_img" title="telegram" href="https://telegram.org/89225882125"><img src="{% static 'main/img/tgIcon.png' %}" alt="Написать в Telegram"></a>
+                        <a class="ico_img" title="VKontakte" href="https://vk.com/89225882125"><img src="{% static 'main/img/vkIcon.png' %}" alt="Написать в VKontakte"></a>
+                    </div>
+            </div>
+        </div>
+        </header>
+        <main>
+        <div class="Plase_tovar">
+            <div class="product_plase">
+                <div class="products_plases">
+                    {% for el in product %}
+                    <div class="{{ el.gender}}">
+                        <img class="p_img" src='{{ el.urlImg }}' class="{{ el.id }}">
+                        <p class="p_page">{{ el.price }}</p>
+                        <p class="p_name" id="{{ el.title }}">{{ el.title }}</p>
+
+                    </div>
+                     <div class="korzina_frame {{ el.id }}" >
+        <div class="korzina">
+            <div class="korz_img_f">
+                <img class="korz_img" src="{{ el.urlImg }}" alt="Изображение товара" width="150px" height="300px">
+            </div>
+            <div class="korz_info">
+                <button class="close_btn" onclick="">
+                <svg  width="26px" height="26px" viewBox="-3.2 -3.2 38.40 38.40" transform="matrix(1, 0, 0, 1, 0, 0)rotate(0)">
+                    <path d="M18.8,16l5.5-5.5c0.8-0.8,0.8-2,0-2.8l0,0C24,7.3,23.5,7,23,7c-0.5,0-1,0.2-1.4,0.6L16,13.2l-5.5-5.5 c-0.8-0.8-2.1-0.8-2.8,
+                    0C7.3,8,7,8.5,7,9.1s0.2,1,0.6,1.4l5.5,5.5l-5.5,5.5C7.3,21.9,7,22.4,7,23c0,0.5,
+                    0.2,1,0.6,1.4 C8,24.8,8.5,25,9,25c0.5,0,1-0.2,1.4-0.6l5.5-5.5l5.5,5.5c0.8,0.8,2.1,0.8,2.8,0c0.8-0.8,0.8-2.1,0-2.8L18.8,16z">
+                    </path>
+                </svg>
+                </button>
+                <div class="korz_info_inf">
+                    <p> {{ el.description}}</p>
+                </div>
+                <div class="korz_buy">
+                    <p class="korz_price">{{ el.price }}</p>
+                    <input class="korz_btn" type="button" value="В корзину">
+                </div>
+            </div>
+        </div>
+    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+        </main>
+        <footer>
+        <div class="f_info">
+            <p>Немного о компании</p>
+            <p>Наша компания занимается продажей только самой модной дизайнерской одежды</p>
+        </div>
+        <div class="f_info">
+            <p>Адрес</p>
+            <p>г.Курган ул.Машиностроителей, 14</p>
+        </div>
+        <div class="f_info">
+            <p>Связаться с нами</p>
+            <a href="Какаято почта">pochta.@mail.ru</a> <!--Почта-->
+            <p><a href="”tel:+78005553535”">+7-000-000-00-00</a></p> <!--Телефон-->
+        </div>
+        </footer>
+    </div>
+    <script type="text/javascript" src="{% static 'main/js/main.js' %}"></script>
+</body>
+</html>
